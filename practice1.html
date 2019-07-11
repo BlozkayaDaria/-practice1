@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body> 
+    <div>
+        drawRomb, drawTriangle, multiply
+    </div>
+<script> 
+function drawTriangle(n){ 
+    var pict=' ';
+    for (var i=0;i<n;i++){
+        for (var j=n;j>i;j--) {
+            pict+=' '}
+        pict+="/";
+        for (j=0;j<i;j++){
+             pict+='  '}
+        pict+='\\\n';
+    }
+    pict+=' /';
+    for (i=0;i<n;i++){
+        pict+='__'}
+    pict+='\\';
+    return (console.log(pict));
+}
+drawTriangle(n);
+
+       function drawRomb(n){ 
+    var pict=' ';
+    for (var i=0;i<n;i++){
+        for (var j=n;j>i;j--) {
+            pict+=' '}
+        pict+="/";
+        for (j=0;j<i;j++){
+             pict+='  '}
+        pict+='\\\n';
+    }
+    for (i=n;i>=1;i--){
+        pict+=" ";
+        for (j=n;j>i;j--){
+            pict+=' '}
+        pict+="\\"
+        for (j=0;j<i-1;j++){
+            pict+='  '}
+        pict+='/\n';
+    }
+
+    return (console.log(pict));
+}
+
+function multiply(a,b) {
+    var s=0;
+    for (var i=1;i<=b;i+){
+        s+=a;
+    }
+    return (console.log(s));
+}
+multiply(a,b);
+</script> 
+</body>
+</html>
