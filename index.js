@@ -4,7 +4,7 @@ const fs = require ('fs');
 const server = http.createServer(function (request, responce) {
     console.log(request.method, request.url);
     if (request.url == '/'){
-       const content = fs.readFileSync ('practce1.html','utf8');
+       const content = fs.readFileSync ('practice1.html','utf8');
        responce.end(content); 
     }
     else if (request.url == '/style.css'){
